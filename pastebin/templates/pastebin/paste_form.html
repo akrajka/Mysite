@@ -1,0 +1,23 @@
+{% extends "base1.html" %}
+{% block title %}Lista{% endblock %}
+{% block content %}  
+<BR>
+<h1>{{ styt }}</h1>
+
+<form method="post">
+    {% csrf_token %}    
+    <table>
+    {{ form }}
+    </table>
+    <input id="dodaj" type="submit" value="Dodaj" />
+	<SPACER SIZE=20>  
+	<a href="{{get_absolute_url}}/paste/list"> Zrezygnuj </a>
+</form>
+</table>
+<BR><BR> 
+<HR COLOR="GREEN">
+
+{% endblock %}
+
+
+ 

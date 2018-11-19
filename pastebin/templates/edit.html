@@ -1,0 +1,13 @@
+{% extends "base1.html" %}
+
+
+{% block content %}
+    <h1>{{ styt }}</h1>
+    <form method="POST" class="post-form">{% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="save btn btn-default" name="save">Nagraj</button>
+        <a href="{{ nrp }}" class="previous">&laquo; Poprzedni </a>
+        <a href="{{ nrn }}" class="next"> Nastepny &raquo;</a>  
+        <a href="pdf/{{ nr }}">PDF</button>      
+    </form>
+{% endblock %}

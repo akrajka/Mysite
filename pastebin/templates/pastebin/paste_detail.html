@@ -1,0 +1,17 @@
+{% extends "base1.html" %}
+
+
+{% block content %}
+    <h1>{{ object.title }}</h1>
+<ul>
+ <li>{{object.id}} </li>
+<li> {{object.content}}  </li>
+ <li>{{object.poster}}  </li>
+ <li>{{object.syntax}}  </li>
+ <li>{{object.timestamp}}   </li>
+</ul>
+        <button type="submit" class="save btn btn-default" name="save">Nagraj</button>
+        <a href="{{ nrp }}" class="previous">&laquo; Poprzedni </a>
+        <a href="{{ nrn }}" class="next"> Nastepny &raquo;</a>  
+        <a href="pdf/{{ nr }}">PDF</button>          
+{% endblock %}

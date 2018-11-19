@@ -1,0 +1,10 @@
+{% extends "base1.html" %}
+{% block content %}
+    <h1>{{ styt }}</h1>
+    <form method="POST" class="post-form">{% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="save btn btn-default" name="save">Nagraj</button>     
+		<SPACER SIZE=20>  
+		<button type="submit" class="discard btn btn-default" name="disc">Zrezygnuj</button>     
+    </form>
+{% endblock %}

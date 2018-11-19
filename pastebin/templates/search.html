@@ -1,0 +1,53 @@
+{% extends "base1.html" %}
+{% block title %}Add{% endblock %}
+{% block content %}
+<h1>Wyszukiwanie rekordow</h1>
+<HR COLOR="GREEN">
+<FORM action="" METHOD="POST"> {% csrf_token %}    
+
+
+<BR>
+<B>Syntax </B> <SELECT NAME="slowo1">
+<OPTION> Plain
+<OPTION> Python
+<OPTION> HTML
+<OPTION> SQL
+<OPTION> Javascript
+<OPTION> CSS
+</SELECT>
+<BR>
+<HR ALIGN=left SIZE=3 WIDTH=200 COLOR="red">
+<BR>
+<B>SPOJNIK </B> 
+<SELECT NAME="wybor1">
+<OPTION> I
+<OPTION> LUB
+<OPTION> I NIE
+<OPTION> LUB NIE
+</SELECT>
+<SPACER SIZE=20> 
+<B>SLOWO W TYTULE </B>
+<INPUT TYPE="text" NAME="slowo2" VALUE=""> 
+<BR>
+<HR ALIGN=left SIZE=3 WIDTH=200 COLOR="red">
+<BR>
+<B>SPOJNIK </B> 
+<SELECT NAME="wybor2">
+<OPTION> I
+<OPTION> LUB
+<OPTION> I NIE
+<OPTION> LUB NIE
+</SELECT>
+<SPACER SIZE=20> 
+<B>SLOWO W TEKSCIE </B>
+<INPUT TYPE="text" NAME="slowo3" VALUE="">
+<BR> <BR><BR>           
+<INPUT TYPE="submit" NAME="subm" VALUE="akceptuj">          
+<SPACER SIZE=20> 
+<INPUT TYPE="reset" NAME="rest" VALUE="usun wszystko">
+</FORM>
+{% endblock %}
+
+
+
+ 

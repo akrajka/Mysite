@@ -1,0 +1,21 @@
+{% load static %}
+<h1>Menu</h1>
+<style> td { font-size:large; font-weight: bold; }</style>
+<table cellpadding="10" cellspacing="10" border=5>
+<font color="#C0FFFF">
+{% for e in query %}
+    <tr>  <td bgcolor="yellow"  > {{ e.nazwa }} </td>
+	      <td bgcolor="#426B9C"> {{e.opis }} </td> 
+		  <td bgcolor="#426B9C"> {{e.rozmiar}} </td> 
+		  <td bgcolor="#426B9C"> {{e.cena}} 	</td>
+	      <td bgcolor="#426B9C" style="line-height: 1px"> <img src="{{e.fotka.url}}" width="200" height="100" alt="Pizza">  </td>
+	</tr>     
+{% empty %}
+    <tr> <td>Nie ma pizz w menu</td> </tr>
+{% endfor %}
+</font>
+</table>
+</ul>
+
+
+ 

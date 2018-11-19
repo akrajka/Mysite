@@ -1,0 +1,30 @@
+<html>
+<style type="text/css">
+body { color: #ffff00; background: #00ffff; padding: 0 5em; margin: 0 }
+h1 { padding: 2em 1em; background: #675 }
+h2 { color: #00ffff; border-top: 1px dotted #00ffff; margin-top: 2em }
+p { margin: 1em 0 }
+</style>
+<body>
+
+{% load static %}
+{% block content %}
+{% if user.is_authenticated %}
+<h1> Użytkownik: {{ user.username }} &nbsp <button type="button" style="font: 15pt Arial; font-weight: bold; color: blue; background:#339999; width: 160px; height: 40px"> 
+       <a href="{% url 'logout' %}">logout</a></button> </h1> 
+{% else %}
+<h1> Nie jesteś zalogowany  &nbsp <button type="button" style="font: 15pt Arial; font-weight: bold; color: blue; background:#339999; width: 160px; height: 40px"> 
+       <a href="{% url 'login' %}" >login</a></button></h1>
+{% endif %}
+{% endblock %}  
+
+<h2><center><img src="{% static "fotka.jpg" %}" width="600" height="300" alt="Teacher"</center></h2> <br/> <br/>
+
+<h3>
+<button type="button" style="font: 16pt Arial; font-weight: bold; color:blue; background:coral; width: 220px; height: 60px"> <a href="/blog"> 1. Blog </a> </button> <br/> <br/>
+<button type="button" style="font: 16pt Arial; font-weight: bold; color:blue; background:coral; width: 220px; height: 60px"> <a href="/admin"> 2. Administrator </a> </button> <br/> <br/>
+<button type="button" style="font: 16pt Arial; font-weight: bold; color:blue; background:coral; width: 220px; height: 60px"> <a href="/paste/list/"> 3. Pastebin </a> </button> <br/> <br/>
+<button type="button" style="font: 16pt Arial; font-weight: bold; color:blue; background:coral; width: 220px; height: 60px"> <a href="/pizza/menu/"> 4. Pizza </a> </button> <br/> <br/>
+</h3>
+</body>
+</html>

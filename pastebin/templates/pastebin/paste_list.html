@@ -1,0 +1,35 @@
+{% extends "base1.html" %}
+{% block title %}Lista{% endblock %}
+{% block content %}  
+<h1> {{styt}} </h1> 		
+<BR>
+<BR><BR>
+<HR COLOR="BLUE" SIZE=5>
+<BR>
+<HR COLOR="GREEN">
+<BR>
+<table style="background-color:rgba(255, 99, 71, 0.9);width:80%;color:white;text-align:left">
+<tr style="background-color:LightGray;color:Gray">
+<th> Id </th>
+<th> Tytul (Pokaż) </1th>
+<th> Opis </th>
+<th> Typ </th>
+<th> Czas </th>
+<th> Usunąć? </th>
+</tr>
+ {% for e in object_list %}
+<th> {{e.id}} </th>
+<th> <a href="{{get_absolute_url}}/paste/edit/{{e.id}}">{{e.title}}</a> </th>
+<th> {{e.poster}} </th>
+<th> {{e.syntax}} </th>
+<th> {{e.timestamp}}  </th>
+<th>  <a href="{{get_absolute_url}}/paste/del/{{e.id}}"> Usuń</a> </th>
+</tr>
+{% endfor %}
+</table>
+<BR><BR> 
+<HR COLOR="GREEN">
+{% endblock %}
+
+
+ 

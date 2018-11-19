@@ -1,0 +1,17 @@
+{% extends "base1.html" %}
+{% block title %}Lista{% endblock %}
+{% block content %}  
+<BR>
+<h1>{{ styt }}</h1>
+<form action="" method="post">{% csrf_token %}
+    <p>Jesteś pewien, że chcesz usunąć obiekt "{{ object }}"?</p>
+    <input type="submit" value="Tak" />
+</form>
+
+</table>
+<BR><BR> 
+<HR COLOR="GREEN">
+{% endblock %}
+
+
+ 
